@@ -39,7 +39,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             try:
                 length = int(self.headers.get("Content-Length", 0))
                 body = json.loads(self.rfile.read(length))
-                to = body.get("_to", "pabloingegnieritest@gmail.com")
+                to = body.get("_to", "projectumsoft@gmail.com")
                 subject = body.get("_subject", "Relevamiento de Requerimientos")
                 text = body.get("relevamiento", "")
 
